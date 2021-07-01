@@ -7,7 +7,7 @@ This module will allow you to create a EC2 Server with a multitude of different 
 * Deploy a simple EC2 Server
 * Deploy a EC2 server with multiple interfaces by simply enabling true and providing data 
 * Deploy a EC2 sever with multiple disks by simply enabling true and providing data
-* Deploy a EC2 server with a dedicated host (Use dedicated_host module on Terraform Public Registry)
+* Deploy a EC2 server with a dedicated host (Use dedicated_host module on Terraform Public Registry refer to [Anton Babenko](https://github.com/antonbabenko))
 
 # Usage
 
@@ -62,6 +62,16 @@ module "linux_rhel7" {
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| aws | n/a |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -99,3 +109,11 @@ module "linux_rhel7" {
 | instance_id | Instance ID |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
+## Authors
+
+Module managed by [Joel Gray](https://github.com/pyjoepy06).
+
+## License
+
+Apache 2 Licensed. See LICENSE for full details.
