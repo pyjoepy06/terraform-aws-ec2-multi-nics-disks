@@ -13,7 +13,8 @@ This module will allow you to create a EC2 Server with a multitude of different 
 
 ```hcl
 module "linux_rhel7" {
-  source = ""
+  source = "pyjoepy06/ec2-multi-nics-disks/aws"
+  version = "1.0.0"
 
   name                   = "my-linux-server"
   instance_count         = 1
