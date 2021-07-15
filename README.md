@@ -83,8 +83,8 @@ No requirements.
 | <a name="instance_type"></a> [instance\_type](#instance\_type) |  Instance type to be used - t2.micro, c5.2xlarge, etc | `string` | n/a | yes |
 | <a name="vpc_security_group_ids"></a> [vpc\_security\_group\_ids](#vpc\_security\_group\_ids) |  Security Groups | `list(string)` | n/a | yes |
 | <a name="subnet_id"></a> [subnet\_id](#subnet\_id) | Subnet ID Instance will run in | `string` | `"subnet-068e2114e4b5cf5ed"` | yes |
-| <a name="root_volume_type"></a> [root\_volume\_type](#root\_volume\_type) | Volume type for root volume gp2, gp3, i2, etc) | `string` | `"gp2"` | no |
-| <a name="root_volume_size"></a> [root\_volume\_size](#root\_volume\_size) | Volume Size for root volume | `number` | `30` | no |
+| <a name="volume_type"></a> [volume\_type](#volume\_type) | Volume type for root volume gp2, gp3, i2, etc) | `string` | `"gp2"` | no |
+| <a name="volume_size"></a> [volume\_size](#volume\_size) | Volume Size for root volume | `number` | `30` | no |
 | <a name="root_block_device"></a> [root\_block\_device](#root\_block\_device) | Root EBS Volume Allows you to set drive name, size, and type | `list(map(string))` | `[]` | no |
 | <a name="key_name"></a> [key\_name](#key\_name) | The key name to use for the instance | `string` | `""` | no |
 | <a name="host_id"></a> [host\_id](#host\_id) | Dedicated Host ID | `string` | `null` | no |
