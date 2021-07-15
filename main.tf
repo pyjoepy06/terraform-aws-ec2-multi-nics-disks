@@ -9,7 +9,7 @@ resource "aws_instance" "this" {
   subnet_id              = var.subnet_id
   key_name               = var.key_name
   private_ip             = element(var.private_ip, count.index)
-  secondary_private_ips  = var.secondary_private_ips
+  iam_instance_profile   = var.iam_instance_profile
   #iam_instance_profile = ""
   host_id = var.host_id
   tenancy = var.tenancy
@@ -43,6 +43,7 @@ resource "aws_network_interface" "this_nic" {
   subnet_id       = element(var.ec2_interface_subnet_ids, count.index)
   private_ips     = element(var.ec2_interface_ip, count.index)
   security_groups = var.vpc_security_group_ids
+  description     = element(var.interfaces_description, count.index)
 
   attachment {
     instance     = element(aws_instance.this.*.id, count.index)

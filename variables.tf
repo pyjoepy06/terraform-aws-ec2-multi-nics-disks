@@ -4,6 +4,12 @@ variable "name" {
   default     = ""
 }
 
+variable "iam_instance_profile"{
+  description = "IAM Instance Profile/Role"
+  type        = string
+  default     = null
+}
+
 variable "instance_count" {
   description = "How many instances to deploy"
   type        = number
@@ -34,13 +40,13 @@ variable "subnet_id" {
   default     = "subnet-068e2114e4b5cf5ed"
 }
 
-variable "root_volume_type" {
+variable "volume_type" {
   description = "Volume type for root volume gp2, gp3, i2, etc)"
   type        = string
   default     = "gp2"
 }
 
-variable "root_volume_size" {
+variable "volume_size" {
   description = "Volume Size for root volume"
   type        = number
   default     = 30
@@ -156,4 +162,10 @@ variable "ec2_interface_subnet_ids" {
   description = "Subnets IDs for each interface in order"
   type        = list(string)
   default = ["subnet-xxx","subnet-xxx"]
+}
+
+variable "interfaces_description" {
+  description = "Interfaces decsription - needed for SBCE Deployment"
+  type        = list(string)
+  default     = [""]
 }
