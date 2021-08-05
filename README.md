@@ -102,6 +102,7 @@ No requirements.
 | <a name="ec2_interface_ip"></a> [ec2\_interface\_ip](#ec2\_interface\_ip) | ENIs allow you to apply multiple IPs to one interface or you can past a list of IPs to for loop and create multiple interfaces. **Depends on [multi\_interface\_instance](#multi\_interface\_instance) = true** | `list(list(string))` | `[["10.0.0.50"],["10.0.0.65"]]` | no |
 | <a name="ec2_interface_subnet_ids"></a> [ec2\_interface\_subnet\_ids](#ec2\_interface\_subnet\_ids) | "Subnets IDs for each interface in order" **Depends on [multi\_interface\_instance](#multi\_interface\_instance) = true** | `list(string)` | `["subnet-xxx","subnet-xxx"]` | no |
 | <a name="device_index"></a> [device\_index](#device\_index) | Integer to define the devices index, 0 is the default device_index/primary interface **Depends on [multi\_interface\_instance](#multi\_interface\_instance) = true** | `number` | `n/a (handle with simple math using interface list` | no |
+| <a name="interfaces_description"></a> [interfaces\_description](#interfaces\_description) | Interfaces decsription - needed for SBCE Deployment **Depends on [multi\_interface\_instance](#multi\_interface\_instance) = true** | `list(string)` | `n/a` | no |
 
 ## Outputs
 
