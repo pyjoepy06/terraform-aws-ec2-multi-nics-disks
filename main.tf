@@ -9,8 +9,8 @@ resource "aws_instance" "this" {
   subnet_id              = var.subnet_id
   key_name               = var.key_name
   private_ip             = element(var.private_ip, count.index)
+  secondary_private_ips  = var.secondary_private_ips
   iam_instance_profile   = var.iam_instance_profile
-  #iam_instance_profile = ""
   host_id = var.host_id
   tenancy = var.tenancy
 
